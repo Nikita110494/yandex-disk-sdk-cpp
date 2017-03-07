@@ -22,15 +22,12 @@ namespace yadisk
 
   {
     		 CURL *curl;
- 		
- 	
-		 struct curl_slist *header_list = nullptr;
-		
+
    		 url::params_t url_params;
    		 url_params["path"] = quote(to.string(), curl);
   		 url_params["fields"] = boost::algorithm::join(fields, ",");
 		 std::string url = api_url + "/copy?" + url_params.string();
-		 curl_slist * header_list = nullptr;
+		 struct curl_slist *header_list = nullptr;
   		 std::string auth_header = "Authorization: OAuth " + token;
 		 header_list = curl_slist_append(header_list, auth_header.c_str()); 
                 
@@ -54,7 +51,7 @@ namespace yadisk
 
 		if (res != CURLE_OK) return json();
 
-		auto answ = json::parse(response);
+		auto answ = json::parse(result);
 		return answ;
   
 
