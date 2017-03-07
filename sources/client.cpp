@@ -16,7 +16,7 @@ namespace yadisk
 
 
     Client::Client(string token_) : token{token_} {}
-    auto Client::upload(string url, url::path from, std::list<string> fields) -> json
+  
 
   auto Client::upload(url::path to,string api_url, std::list<string> fields) -> json
 
