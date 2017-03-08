@@ -5,7 +5,6 @@ dist: trusty
 os: osx
 
 script:
-- cd yandex-disk-sdk-cpp
 - mkdir build
 - cmake -H. -B_build
 - cmake --build _build
