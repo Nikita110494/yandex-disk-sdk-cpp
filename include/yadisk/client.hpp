@@ -28,7 +28,13 @@ namespace yadisk
         auto list(json options = nullptr) -> json;
 
         auto upload(url::path to, fs::path from, bool overwrite, std::list<string> fields = std::list<string>()) -> json;
-
+        ///upload to Disk
+        /// \param[in] path to
+        /// \param[in] url
+        /// \param[in] fields noexeption
+        /// \return https://tech.yandex.ru/disk/api/reference/response-objects-docpage/#link
+        /// \include examples/upload.cpp
+       
         auto upload(url::path to, string url, std::list<string> fields = std::list<string>()) -> json;
 
         auto download(url::path from, url::path to, std::list<string> fields = std::list<string>()) -> json;
