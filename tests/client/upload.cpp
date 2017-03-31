@@ -16,3 +16,4 @@ TEST_CASE("download file on Disk", "[client][set][api_url][file]") {
     std::list<std::string> fields {};
     auto info = client.upload(to, api_url, fields);
     REQUIRE(not info.empty());
+}
