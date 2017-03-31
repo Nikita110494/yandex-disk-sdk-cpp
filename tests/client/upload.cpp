@@ -1,7 +1,7 @@
 #include <catch.hpp>
 #include <yadisk/client.hpp>
 using ydclient = yadisk::Client;
-
+#include <main.cpp>
 #include <string>
 #include <list>
 
